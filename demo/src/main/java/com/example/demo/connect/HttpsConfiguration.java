@@ -8,6 +8,9 @@ import org.springframework.boot.web.embedded.tomcat.TomcatServletWebServerFactor
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+/**
+ * 重定向http请求到https
+ */
 @Configuration
 public class HttpsConfiguration {
 

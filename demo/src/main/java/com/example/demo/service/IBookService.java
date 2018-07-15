@@ -3,8 +3,8 @@ package com.example.demo.service;
 import com.example.demo.model.Book;
 
 public interface IBookService {
-    Book getBook(String id);
+    Book getBook(long id);
 
-    Book addBook(String name);
+    Book addBook(Book book);
 
 }

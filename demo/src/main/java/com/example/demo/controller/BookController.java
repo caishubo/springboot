@@ -19,15 +19,15 @@ public class BookController {
 
     @ResponseBody
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
-    public Book getBook(@PathVariable("id") String id) {
+    public Book getBook(@PathVariable("id") long id) {
         return bookService.getBook(id);
     }
 
     @ResponseBody
     @RequestMapping(method = RequestMethod.POST)
     public Book addBoook(@RequestBody Book book) {
-        Book newBook = bookService.addBook(book.getName());
-        return newBook;
+        bookService.addBook(book);
+        return book;
     }
 
 }

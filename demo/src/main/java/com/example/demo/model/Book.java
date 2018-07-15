@@ -1,33 +1,32 @@
 package com.example.demo.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "book")
 public class Book {
 
-    private String id;
-    private String Name;
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private long id;
 
-    public Book() {
+    @Column(name = "name")
+    private String name;
 
-    }
-
-    public Book(String id, String name) {
-        this.id = id;
-        Name = name;
-    }
-
-    public String getName() {
-        return Name;
-    }
-
-    public void setName(String name) {
-
-        Name = name;
-    }
-
-    public String getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(long id) {
         this.id = id;
+    }
+
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
